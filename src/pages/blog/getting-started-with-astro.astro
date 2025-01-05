@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "getting started with astro";
+const date = "2024-03-20";
+---
+
+<Layout title={title}>
+  <article class="prose prose-invert prose-lg max-w-none">
+    <h1 class="text-4xl font-bold mb-4">{title}</h1>
+    <p class="text-sage-500 mb-8">{date}</p>
+    
+    <p>
+      hi! this is a sample blog post that shows you how to create new posts.
+    </p>
+
+    <h2>how to add a new post</h2>
+    <ol>
+      <li>create a new .astro file in the src/pages/blog directory</li>
+      <li>copy this template</li>
+      <li>update the title and date at the top</li>
+      <li>write your content using markdown-style formatting</li>
+      <li>add the post information to the posts array in src/pages/blog.astro</li>
+    </ol>
+
+    <h2>formatting examples</h2>
+    <p>
+      you can use <strong>bold text</strong>, <em>italic text</em>, and even add code snippets:
+    </p>
+
+    <pre><code>console.log("hello world");</code></pre>
+  </article>
+</Layout>

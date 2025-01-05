@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const projects: any[] = [];  // Empty array until ready to publish
+---
+
+<Layout title="projects">
+  <h1 class="text-4xl font-bold mb-8">projects.</h1>
+  {projects.length > 0 ? (
+    <ul class="space-y-4">
+      {projects.map(project => (
+        <li>
+          <span class="mr-4">{project.title}</span>
+          <a href={project.github} class="text-sage-500 hover:text-sage-400" target="_blank" rel="noopener noreferrer">
+            github
+          </a>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p class="text-lg text-gray-400">Projects coming soon...</p>
+  )}
+</Layout>
